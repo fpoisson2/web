@@ -7,10 +7,9 @@ const AddressModeEnum = z.enum(
 const ProtocolFlagsEnum = z.enum(
   Protobuf.Config.Config_NetworkConfig_ProtocolFlags,
 );
-
-// WiFiMode enum - will be available after protobufs are updated
-// Temporary workaround: use number until protobufs are synced
-const WiFiModeEnum = z.coerce.number().int().min(0).max(1).optional();
+const WiFiModeEnum = z.enum(
+  Protobuf.Config.Config_NetworkConfig_WiFiMode,
+);
 
 export const NetworkValidationIpV4ConfigSchema = z.object({
   ip: z.ipv4(),

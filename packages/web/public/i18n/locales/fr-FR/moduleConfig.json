@@ -248,6 +248,14 @@
       "label": "TLS activé",
       "description": "Activer ou désactiver TLS"
     },
+    "wssEnabled": {
+      "label": "WSS activé",
+      "description": "Activer MQTT sur WebSocket Sécurisé (WSS). Prioritaire sur le TLS standard."
+    },
+    "wssPath": {
+      "label": "Chemin WebSocket",
+      "description": "Chemin WebSocket pour la connexion WSS (par défaut : /). Certains brokers utilisent des chemins personnalisés comme /mqtt ou /ws."
+    },
     "root": {
       "label": "Sujet principal",
       "description": "Sujet racine MQTT à utiliser pour les serveurs par défaut/personnalisés"

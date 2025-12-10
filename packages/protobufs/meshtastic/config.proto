@@ -7,7 +7,7 @@ import "meshtastic/device_ui.proto";
 option csharp_namespace = "Meshtastic.Protobufs";
 option go_package = "github.com/meshtastic/go/generated";
 option java_outer_classname = "ConfigProtos";
-option java_package = "com.geeksville.mesh";
+option java_package = "org.meshtastic.proto";
 option swift_prefix = "";
 
 message Config {
@@ -577,6 +577,44 @@ message Config {
      * Enable/Disable ipv6 support
      */
     bool ipv6_enabled = 11;
+
+    /*
+     * WiFi authentication mode (Personal or Enterprise)
+     */
+    enum WiFiMode {
+      /*
+       * WPA2-Personal (default) - Uses wifi_psk for authentication
+       */
+      WPA2_PERSONAL = 0;
+
+      /*
+       * WPA2-Enterprise - Uses wifi_eap_* fields for authentication
+       * Supports PEAP/MSCHAPv2 for enterprise networks
+       */
+      WPA2_ENTERPRISE = 1;
+    }
+
+    /*
+     * WiFi authentication mode (default: WPA2_PERSONAL)
+     */
+    WiFiMode wifi_mode = 12;
+
+    /*
+     * EAP identity for WPA2-Enterprise (outer identity)
+     * Often the same as wifi_eap_username or anonymous@domain.com
+     */
+    string wifi_eap_identity = 13;
+
+    /*
+     * EAP username for WPA2-Enterprise MSCHAPv2 (inner identity)
+     * Used for PEAP/MSCHAPv2 authentication
+     */
+    string wifi_eap_username = 14;
+
+    /*
+     * EAP password for WPA2-Enterprise MSCHAPv2
+     */
+    string wifi_eap_password = 15;
 
     /*
      * Available flags auxiliary network protocols

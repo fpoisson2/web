@@ -248,6 +248,14 @@
       "label": "TLS Enabled",
       "description": "Enable or disable TLS"
     },
+    "wssEnabled": {
+      "label": "WSS Enabled",
+      "description": "Enable MQTT over WebSocket Secure (WSS). Takes precedence over regular TLS."
+    },
+    "wssPath": {
+      "label": "WebSocket Path",
+      "description": "WebSocket path for WSS connection (default: /). Some brokers use custom paths like /mqtt or /ws."
+    },
     "root": {
       "label": "Root topic",
       "description": "MQTT root topic to use for default/custom servers"

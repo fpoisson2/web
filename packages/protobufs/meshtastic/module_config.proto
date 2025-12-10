@@ -5,7 +5,7 @@ package meshtastic;
 option csharp_namespace = "Meshtastic.Protobufs";
 option go_package = "github.com/meshtastic/go/generated";
 option java_outer_classname = "ModuleConfigProtos";
-option java_package = "com.geeksville.mesh";
+option java_package = "org.meshtastic.proto";
 option swift_prefix = "";
 
 /*
@@ -80,6 +80,19 @@ message ModuleConfig {
      * Settings for reporting information about our node to a map via MQTT
      */
     MapReportSettings map_report_settings = 11;
+
+    /*
+     * If true, use MQTT over WebSocket Secure (WSS) instead of regular TLS/TCP
+     * This allows MQTT to work through web proxies and firewalls that block MQTT ports
+     * Note: wss_enabled takes precedence over tls_enabled
+     */
+    bool wss_enabled = 12;
+
+    /*
+     * WebSocket path for WSS connection (default is "/")
+     * Some brokers use custom paths like "/mqtt" or "/ws"
+     */
+    string wss_path = 13;
   }
 
   /*

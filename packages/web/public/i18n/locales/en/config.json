@@ -240,6 +240,22 @@
       "description": "Enable or disable the WiFi radio",
       "label": "Enabled"
     },
+    "wifiMode": {
+      "description": "WiFi authentication mode (WPA2-Personal or WPA2-Enterprise)",
+      "label": "WiFi Mode"
+    },
+    "wifiEapIdentity": {
+      "description": "EAP identity for WPA2-Enterprise (outer identity). Often the same as username or anonymous@domain.com",
+      "label": "EAP Identity"
+    },
+    "wifiEapUsername": {
+      "description": "EAP username for WPA2-Enterprise MSCHAPv2 (inner identity)",
+      "label": "EAP Username"
+    },
+    "wifiEapPassword": {
+      "description": "EAP password for WPA2-Enterprise MSCHAPv2",
+      "label": "EAP Password"
+    },
     "meshViaUdp": {
       "label": "Mesh via UDP"
     },

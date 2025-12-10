@@ -122,6 +122,66 @@ export const Network = ({ onFormInit }: NetworkConfigProps) => {
                 },
               ],
             },
+            // TODO: Uncomment when protobufs are updated with WiFiMode enum
+            // {
+            //   type: "select",
+            //   name: "wifiMode",
+            //   label: t("network.wifiMode.label"),
+            //   description: t("network.wifiMode.description"),
+            //   properties: {
+            //     enumValue: Protobuf.Config.Config_NetworkConfig_WiFiMode,
+            //   },
+            //   disabledBy: [
+            //     {
+            //       fieldName: "wifiEnabled",
+            //     },
+            //   ],
+            // },
+            // {
+            //   type: "text",
+            //   name: "wifiEapIdentity",
+            //   label: t("network.wifiEapIdentity.label"),
+            //   description: t("network.wifiEapIdentity.description"),
+            //   disabledBy: [
+            //     {
+            //       fieldName: "wifiEnabled",
+            //     },
+            //     {
+            //       fieldName: "wifiMode",
+            //       selector: Protobuf.Config.Config_NetworkConfig_WiFiMode.WPA2_PERSONAL,
+            //     },
+            //   ],
+            // },
+            // {
+            //   type: "text",
+            //   name: "wifiEapUsername",
+            //   label: t("network.wifiEapUsername.label"),
+            //   description: t("network.wifiEapUsername.description"),
+            //   disabledBy: [
+            //     {
+            //       fieldName: "wifiEnabled",
+            //     },
+            //     {
+            //       fieldName: "wifiMode",
+            //       selector: Protobuf.Config.Config_NetworkConfig_WiFiMode.WPA2_PERSONAL,
+            //     },
+            //   ],
+            // },
+            // {
+            //   type: "password",
+            //   name: "wifiEapPassword",
+            //   label: t("network.wifiEapPassword.label"),
+            //   description: t("network.wifiEapPassword.description"),
+            //   disabledBy: [
+            //     {
+            //       fieldName: "wifiEnabled",
+            //     },
+            //     {
+            //       fieldName: "wifiMode",
+            //       selector: Protobuf.Config.Config_NetworkConfig_WiFiMode.WPA2_PERSONAL,
+            //     },
+            //   ],
+            // },
           ],
         },
         {

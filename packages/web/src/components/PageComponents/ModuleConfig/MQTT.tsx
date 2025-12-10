@@ -149,6 +149,31 @@ export const MQTT = ({ onFormInit }: MqttModuleConfigProps) => {
               ],
             },
             {
+              type: "toggle",
+              name: "wssEnabled",
+              label: t("mqtt.wssEnabled.label"),
+              description: t("mqtt.wssEnabled.description"),
+              disabledBy: [
+                {
+                  fieldName: "enabled",
+                },
+              ],
+            },
+            {
+              type: "text",
+              name: "wssPath",
+              label: t("mqtt.wssPath.label"),
+              description: t("mqtt.wssPath.description"),
+              disabledBy: [
+                {
+                  fieldName: "enabled",
+                },
+                {
+                  fieldName: "wssEnabled",
+                },
+              ],
+            },
+            {
               type: "text",
               name: "root",
               label: t("mqtt.root.label"),

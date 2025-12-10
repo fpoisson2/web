@@ -13,6 +13,8 @@ export const MqttValidationSchema = z.object({
   encryptionEnabled: z.boolean(),
   jsonEnabled: z.boolean(),
   tlsEnabled: z.boolean(),
+  wssEnabled: z.boolean(),
+  wssPath: z.string().min(0).max(30),
   root: z.string(),
   proxyToClientEnabled: z.boolean(),
   mapReportingEnabled: z.boolean(),

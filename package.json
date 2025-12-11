@@ -42,6 +42,9 @@
     "vitest": "^3.2.4"
   },
   "pnpm": {
+    "overrides": {
+      "@meshtastic/protobufs": "link:./packages/protobufs"
+    },
     "onlyBuiltDependencies": [
       "@serialport/bindings-cpp",
       "@tailwindcss/oxide",

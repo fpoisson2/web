@@ -20,7 +20,7 @@
     "check": "biome check src/",
     "check:fix": "biome check --write src/",
     "dev": "vite",
-    "dev:https": "USE_HTTPS=true vite",
+    "dev:https": "VITE_USE_HTTPS=true vite",
     "test": "vitest",
     "typecheck": "pnpm run tsc --noEmit",
     "preview": "vite preview",
